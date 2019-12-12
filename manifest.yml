@@ -1,0 +1,12 @@
+---
+applications:
+- name: myregion-data-loader
+  path: ./target/myregion-data-loader.jar
+  instances: 1
+  memory: 1G
+#  buildpack: java_buildpack_offline
+  random-route: false
+  env:
+     SPRING_PROFILES_ACTIVE:
+  services:
+  - scdf-test
